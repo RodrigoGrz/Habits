@@ -8,7 +8,8 @@ app.register(cors);
 app.register(appRoutes);
 
 app.listen({
-    port: 3334
+    port: 3334,
+    host: '::'
 }).then(() => {
     console.log("Server is running on PORT 3334");
 });
