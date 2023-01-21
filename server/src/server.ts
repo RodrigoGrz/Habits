@@ -9,7 +9,7 @@ app.register(appRoutes);
 
 app.listen({
     port: 3334,
-    host: '::'
+    host: '0.0.0.0'
 }).then(() => {
     console.log("Server is running on PORT 3334");
 });
