@@ -11,7 +11,7 @@ import { BackButton } from "../components/BackButton";
 import { ProgressBar } from "../components/ProgressBar";
 import { Checkbox } from "../components/Checkbox";
 import { Loading } from "../components/Loading";
-// import { HabitsEmpty } from "../components/HabitsEmpty";
+import { HabitsEmpty } from "../components/HabitsEmpty";
 
 interface Params {
   date: string;
@@ -41,8 +41,6 @@ export function Habit() {
   const habitsProgress = dayInfo?.possibleHabits?.length 
     ? generateProgressPercentage(dayInfo.possibleHabits.length, completedHabits.length) 
     : 0
-
-    console.log(habitsProgress)
 
   async function fetchHabits() {
     try {
@@ -117,7 +115,7 @@ export function Habit() {
               />
             ))
             : 
-            <View />
+            <HabitsEmpty />
           }
         </View>
 
